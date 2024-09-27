@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Gunakan FrameLayout untuk menumpuk overlay dan teks -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sensoji">
+
+        <!-- View overlay gelap -->
+        <View
+            android:id="@+id/darkOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80000000" />
+
+        <!-- Konten di dalam overlay -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Judul TextView -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="180pt"
+                android:fontFamily="@font/bree_serif"
+                android:padding="8dp"
+
+                android:text="Sensoji Temple"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <!-- Deskripsi TextView -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppinsregular"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:paddingRight="40dp"
+                android:text="It is Tokyo's oldest temple, and one of its most significant. Formerly associated with the Tendai sect of Buddhism."
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+
+            <!-- Button -->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="42dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="30dp"
+                android:text="See details"
+                android:id="@+id/buttonDetails"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>

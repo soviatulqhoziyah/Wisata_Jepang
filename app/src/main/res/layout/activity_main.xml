@@ -1,0 +1,70 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <!-- Teks Judul Utama -->
+    <TextView
+        android:id="@+id/headerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:text="Take your time and discover various sights in"
+        android:textSize="40sp"
+        android:fontFamily="@font/bree_serif"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Teks Subjudul -->
+    <TextView
+        android:id="@+id/subText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:fontFamily="@font/bree_serif"
+        android:text="Japan"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#0074CC"
+        app:layout_constraintTop_toBottomOf="@id/headerText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgsub"
+        android:layout_width="150dp"
+        android:scaleType="centerCrop"
+        android:layout_height="wrap_content"
+        android:src="@drawable/_vec"
+        app:layout_constraintTop_toBottomOf="@id/subText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Gambar Destinasi -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewDestination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="8dp"
+        app:layout_constraintTop_toBottomOf="@id/imgsub"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Grid untuk Gambar Sights -->
+    <!-- Grid untuk Gambar Sights -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewSight"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="6dp"
+        app:layout_constraintTop_toBottomOf="@id/recyclerViewDestination"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <!-- Tambahkan batas bawah -->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
